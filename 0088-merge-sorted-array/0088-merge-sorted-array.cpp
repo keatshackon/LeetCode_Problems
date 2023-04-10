@@ -23,9 +23,5 @@ public:
             j--;
             k--;
         }
-        
-        for(int i = 0;i < n+m;i++){
-            cout<<nums1[i]<<" ";
-        }
     }
 };
