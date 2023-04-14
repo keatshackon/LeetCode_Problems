@@ -3,9 +3,7 @@ public:
     
     bool isValid(vector<vector<char>>&board,int x,int y,char ch){
         
-        int row = board.size();
-        int col = board[0].size();
-        
+
         for(int i = 0;i < 9;i++){
             
             if(ch == board[i][y]){
