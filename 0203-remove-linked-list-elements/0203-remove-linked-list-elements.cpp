@@ -37,8 +37,8 @@ public:
         
         while(temp != NULL){
             if(temp->val == val){
-                prev -> next = temp->next;
                 temp = temp->next;
+                prev -> next = temp;
             }else{
                 temp = temp->next;
                 prev = prev->next;
@@ -46,11 +46,6 @@ public:
             
         }
         
-        return ans;
-        
-        
-        
-        
-        
+        return ans;   
     }
 };
