@@ -4,14 +4,9 @@ public:
         
         int l = 0;
         int r = arr.size()-1;
-        
-        if(arr[r] > arr[r-1]){
-            return r;
-        }else if(arr[0] > arr[1]){
-            return 0;
-        }
+    
         l = 1;
-        r = r-1;
+        r = r - 1;
         
         while(l <= r){
             int m = (l+r)/2;
