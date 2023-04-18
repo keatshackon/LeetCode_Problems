@@ -30,9 +30,7 @@ public:
             }
             j++;
         }
-        for(auto q:m){
-            cout<<q.first<<" : "<<q.second<<"\n";
-        }
+        
         return ans;   
     }
 };
