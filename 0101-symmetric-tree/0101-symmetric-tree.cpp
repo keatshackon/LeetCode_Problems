@@ -15,9 +15,7 @@ public:
     bool solve(TreeNode *l1,TreeNode *l2){
         if(l1 == NULL and l2 == NULL){
             return true;
-        }else if((l1 == NULL and l2 != NULL) ){
-            return false;
-        }else if((l1 != NULL and l2 == NULL)){
+        }else if((l1 == NULL and l2 != NULL) or (l1 != NULL and l2 == NULL)){
             return false;
         }
         
