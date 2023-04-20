@@ -14,8 +14,6 @@ public:
     
     bool solve(TreeNode *root,int sum,int target){
         
-        //cout<<sum<<"\n";
-        
         if(root == NULL){
             return false;
         }
@@ -40,12 +38,12 @@ public:
             return false;
         }
         
-        int sum = root->val;
+        int sum = 0;
         
-        if(sum == targetSum and root->left == NULL and root->right == NULL){
-            return true;
-        }
+        // if(sum == targetSum and root->left == NULL and root->right == NULL){
+        //     return true;
+        // }
         
-        return solve(root->left,sum,targetSum) or solve(root->right,sum,targetSum);
+        return solve(root,sum,targetSum);
     }
 };
