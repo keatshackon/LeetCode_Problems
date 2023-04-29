@@ -33,11 +33,7 @@ public:
     
         bool ans =  solve(0,n,nums,dp);
         
-        for(auto q:dp){
-            cout<<q<<" ";
-        }
-        cout<<"\n";
-        
+    
         return ans; 
         
         
