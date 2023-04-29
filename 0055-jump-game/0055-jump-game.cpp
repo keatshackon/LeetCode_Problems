@@ -28,15 +28,30 @@ public:
         
         int n = nums.size();
         
-        vector<int>dp(n,-1);
+//         vector<int>dp(n,-1);
     
-    
-        bool ans =  solve(0,n,nums,dp);
-        
-    
-        return ans; 
+//         bool ans =  solve(0,n,nums,dp);
+            
+//         return ans; 
         
         
+        // Memoizatoins
+        
+        vector<bool>dp(n,0);
+        
+        dp[n-1] = true;
+        
+        for(int idx = n-2;idx >= 0 ;idx--){
+            int k = nums[idx];
+            bool s1 = false;
+            for(int i = 1;i <= k;i++){
+                s1 = dp[idx+i];
+                if(s1) break;
+            }
+            dp[idx] = s1;
+        }
+        
+        return dp[0];
         
     }
 };
